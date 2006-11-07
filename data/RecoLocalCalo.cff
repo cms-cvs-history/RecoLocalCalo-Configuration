@@ -1,0 +1,29 @@
+#
+# Ecal part
+#
+include "RecoLocalCalo/Configuration/data/ecalLocalRecoSequence.cff"
+
+#defines a sequence ecalLocalRecoSequence
+
+#
+# Hcal part
+#
+# calo geometry
+include "Geometry/CaloEventSetup/data/CaloGeometry.cfi"
+
+# HCAL calibrations
+include "CalibCalorimetry/HcalPlugins/data/hardwired_conditions.cfi"
+
+#HCAL reconstruction
+include "RecoLocalCalo/HcalRecProducers/data/HcalSimpleReconstructor-hbhe.cfi"
+include "RecoLocalCalo/HcalRecProducers/data/HcalSimpleReconstructor-ho.cfi"
+include "RecoLocalCalo/HcalRecProducers/data/HcalSimpleReconstructor-hf.cfi" 
+
+sequence  hcalLocalRecoSequence = { hbhereco & hfreco & horeco }
+
+#
+# sequence CaloLocalReco
+#
+
+sequence calolocalreco = {ecalLocalRecoSequence,hcalLocalRecoSequence}
+#
