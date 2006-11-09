@@ -7,7 +7,7 @@ block ecalLocalRecoFEVT =
 	"keep *_ecalWeightUncalibRecHit_*_*",
 	#Calibrated RecHits
 	"keep *_ecalPreshowerRecHit_*_*",
-	"keep *_ecalRecHit_*_*",
+	"keep *_ecalRecHit_*_*"
     }
 }
 
@@ -18,7 +18,7 @@ block ecalLocalRecoRECO =
     {
 	#Calibrated RecHits
 	"keep *_ecalPreshowerRecHit_*_*",
-	"keep *_ecalRecHit_*_*",
+	"keep *_ecalRecHit_*_*"
     }
 }
 
