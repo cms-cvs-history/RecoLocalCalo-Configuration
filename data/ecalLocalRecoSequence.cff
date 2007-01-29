@@ -1,8 +1,11 @@
   # Calo geometry service model
   include "Geometry/CaloEventSetup/data/CaloGeometry.cfi"
 
+#
+# removed by tommaso
+#
   #ECAL conditions
-  include "CalibCalorimetry/EcalTrivialCondModules/data/EcalTrivialCondRetriever.cfi"
+#  include "CalibCalorimetry/EcalTrivialCondModules/data/EcalTrivialCondRetriever.cfi"
 
   #ECAL reconstruction
   include "RecoLocalCalo/EcalRecProducers/data/ecalWeightUncalibRecHit.cfi"
@@ -10,3 +13,5 @@
   include "RecoLocalCalo/EcalRecProducers/data/ecalPreshowerRecHit.cfi"
 
   sequence ecalLocalRecoSequence = { ecalWeightUncalibRecHit, ecalRecHit , ecalPreshowerRecHit }
+
+

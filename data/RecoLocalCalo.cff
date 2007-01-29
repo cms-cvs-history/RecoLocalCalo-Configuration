@@ -11,8 +11,11 @@ include "RecoLocalCalo/Configuration/data/ecalLocalRecoSequence.cff"
 # calo geometry
 include "Geometry/CaloEventSetup/data/CaloGeometry.cfi"
 
+#
+# changed by tommaso. now the calibrations are read from Configuration/StaqndardSequences/data/*Conditions.cff
+#
 # HCAL calibrations
-include "CalibCalorimetry/HcalPlugins/data/hardwired_conditions.cfi"
+#include "CalibCalorimetry/HcalPlugins/data/hardwired_conditions.cfi"
 
 #HCAL reconstruction
 include "RecoLocalCalo/HcalRecProducers/data/HcalSimpleReconstructor-hbhe.cfi"
