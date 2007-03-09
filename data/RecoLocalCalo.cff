@@ -28,5 +28,5 @@ sequence  hcalLocalRecoSequence = { hbhereco & hfreco & horeco }
 # sequence CaloLocalReco
 #
 
-sequence calolocalreco = {ecalLocalRecoSequence,hcalLocalRecoSequence}
+sequence calolocalreco = {ecalLocalRecoSequence & hcalLocalRecoSequence}
 #
