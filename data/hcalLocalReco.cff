@@ -1,0 +1,10 @@
+#
+# Hcal part
+
+#HCAL reconstruction
+include "RecoLocalCalo/HcalRecProducers/data/HcalSimpleReconstructor-hbhe.cfi"
+include "RecoLocalCalo/HcalRecProducers/data/HcalSimpleReconstructor-ho.cfi"
+include "RecoLocalCalo/HcalRecProducers/data/HcalSimpleReconstructor-hf.cfi" 
+
+sequence  hcalLocalRecoSequence = { hbhereco & hfreco & horeco }
+

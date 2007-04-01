@@ -1,0 +1,20 @@
+#
+# Hcal part
+
+#HCAL Zero suppression (not done during digitization by default)
+
+include "SimCalorimetry/HcalZeroSuppressionProducers/data/HcalSimpleAmpl-all.cfi"
+
+#HCAL reconstruction
+include "RecoLocalCalo/HcalRecProducers/data/HcalSimpleReconstructor-hbhe-zs.cfi"
+include "RecoLocalCalo/HcalRecProducers/data/HcalSimpleReconstructor-ho-zs.cfi"
+include "RecoLocalCalo/HcalRecProducers/data/HcalSimpleReconstructor-hf-zs.cfi" 
+
+sequence  hcalLocalRecoSequence = { hcalZeroSuppressedDigis & hbhereco & hfreco & horeco }
+
+#
+# sequence CaloLocalReco
+#
+
+sequence calolocalreco = {ecalLocalRecoSequence & hcalLocalRecoSequence}
+#
