@@ -19,7 +19,7 @@ include "Geometry/CaloEventSetup/data/CaloGeometry.cfi"
 
 #HCAL reconstruction
 
-include "RecoLocalCalo/Configuration/data/hcalLocalReco.cff"
+include "RecoLocalCalo/Configuration/data/hcalLocalReco_zs.cff"
 
 #
 # sequence CaloLocalReco
