@@ -9,7 +9,7 @@ include "RecoLocalCalo/Configuration/data/ecalLocalRecoSequence.cff"
 # Hcal part
 #
 # calo geometry
-include "Geometry/CaloEventSetup/data/CaloGeometry.cfi"
+include "Geometry/CaloEventSetup/data/CaloGeometry.cff"
 
 #
 # changed by tommaso. now the calibrations are read from Configuration/StaqndardSequences/data/*Conditions.cff
