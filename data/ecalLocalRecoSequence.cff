@@ -12,7 +12,8 @@
   include "RecoLocalCalo/EcalRecProducers/data/ecalRecHit.cfi"
   include "RecoLocalCalo/EcalRecProducers/data/ecalPreshowerRecHit.cfi"
 
-#sequence ecalLocalRecoSequence = { ecalWeightUncalibRecHit, ecalRecHit , ecalPreshowerRecHit }
+
 sequence ecalLocalRecoSequence = { (ecalWeightUncalibRecHit, ecalRecHit) & ecalPreshowerRecHit }
 
+sequence ecalLocalRecoSequence_nopreshower = {ecalWeightUncalibRecHit,ecalRecHit }
 
