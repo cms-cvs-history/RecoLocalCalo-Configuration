@@ -19,5 +19,5 @@ replace ecalRecHit.ChannelStatusToBeExcluded = { 1 }
 
 sequence ecalLocalRecoSequence = { (ecalFixedAlphaBetaFitUncalibRecHit, ecalWeightUncalibRecHit, ecalRecHit) & ecalPreshowerRecHit }
 
-sequence ecalLocalRecoSequence_nopreshower = { ecalWeightUncalibRecHit, ecalRecHit }
+
 
