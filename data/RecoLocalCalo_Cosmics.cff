@@ -1,0 +1,49 @@
+#
+# Ecal part
+#
+include "RecoLocalCalo/Configuration/data/ecalLocalRecoSequenceCosmics.cff"
+
+#defines a sequence ecalLocalRecoSequence
+
+#
+# Hcal part
+#
+# calo geometry
+include "Geometry/CaloEventSetup/data/CaloGeometry.cff"
+
+#
+# changed by tommaso. now the calibrations are read from Configuration/StaqndardSequences/data/*Conditions.cff
+#
+# HCAL calibrations
+#include "CalibCalorimetry/HcalPlugins/data/hardwired_conditions.cfi"
+
+#HCAL reconstruction
+
+include "RecoLocalCalo/Configuration/data/hcalLocalReco.cff"
+replace hbhereco.firstSample = 1
+replace hbhereco.samplesToAdd = 8
+replace hbhereco.correctForTimeslew = true
+replace hbhereco.correctForPhaseContainment = true
+replace hbhereco.correctionPhaseNS = 10.0
+
+replace horeco.firstSample = 1
+replace horeco.samplesToAdd = 8
+replace horeco.correctForTimeslew = true
+replace horeco.correctForPhaseContainment = true
+replace horeco.correctionPhaseNS = 10.
+
+replace hfreco.firstSample = 1
+replace hfreco.samplesToAdd = 8
+replace hfreco.correctForTimeslew = true
+replace hfreco.correctForPhaseContainment = true
+replace hfreco.correctionPhaseNS = 10.
+
+# HOWeight needs a positive value; otherwise it gets overwritten
+replace towerMaker.HOWeight=1e-99
+
+#
+# sequence CaloLocalReco
+#
+
+sequence calolocalreco = {ecalLocalRecoSequence & hcalLocalRecoSequence}
+#
