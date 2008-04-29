@@ -38,8 +38,6 @@ replace hfreco.correctForTimeslew = true
 replace hfreco.correctForPhaseContainment = true
 replace hfreco.correctionPhaseNS = 10.
 
-# HOWeight needs a positive value; otherwise it gets overwritten
-replace towerMaker.HOWeight=1e-99
 
 #
 # sequence CaloLocalReco
