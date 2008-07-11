@@ -8,7 +8,7 @@ include "Geometry/CaloEventSetup/data/CaloGeometry.cff"
 #  include "CalibCalorimetry/EcalTrivialCondModules/data/EcalTrivialCondRetriever.cfi"
 
 #ECAL reconstruction
-#include "RecoLocalCalo/EcalRecProducers/data/ecalWeightUncalibRecHit.cfi"
+include "RecoLocalCalo/EcalRecProducers/data/ecalWeightUncalibRecHit.cfi"
 include "RecoLocalCalo/EcalRecProducers/data/ecalFixedAlphaBetaFitUncalibRecHit.cfi"
 include "RecoLocalCalo/EcalRecProducers/data/ecalRecHit.cfi"
 include "RecoLocalCalo/EcalRecProducers/data/ecalPreshowerRecHit.cfi"
@@ -17,8 +17,7 @@ replace ecalRecHit.EBuncalibRecHitCollection = ecalFixedAlphaBetaFitUncalibRecHi
 replace ecalRecHit.EEuncalibRecHitCollection = ecalFixedAlphaBetaFitUncalibRecHit:EcalUncalibRecHitsEE
 replace ecalRecHit.ChannelStatusToBeExcluded = { 1 }
 
-#sequence ecalLocalRecoSequence = { (ecalFixedAlphaBetaFitUncalibRecHit, ecalWeightUncalibRecHit, ecalRecHit) & ecalPreshowerRecHit }
-sequence ecalLocalRecoSequence = { (ecalFixedAlphaBetaFitUncalibRecHit, ecalRecHit) & ecalPreshowerRecHit }
+sequence ecalLocalRecoSequence = { (ecalFixedAlphaBetaFitUncalibRecHit, ecalWeightUncalibRecHit, ecalRecHit) & ecalPreshowerRecHit }
 
 
 
