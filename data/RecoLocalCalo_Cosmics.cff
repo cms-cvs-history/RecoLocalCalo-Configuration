@@ -38,6 +38,12 @@ replace hfreco.correctForTimeslew = true
 replace hfreco.correctForPhaseContainment = true
 replace hfreco.correctionPhaseNS = 10.
 
+replace zdcreco.firstSample = 1
+replace zdcreco.samplesToAdd = 8
+replace zdcreco.correctForTimeslew = true
+replace zdcreco.correctForPhaseContainment = true
+replace zdcreco.correctionPhaseNS = 10.
+
 
 #
 # sequence CaloLocalReco
